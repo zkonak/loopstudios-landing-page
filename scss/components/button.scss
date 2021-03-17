@@ -1,0 +1,22 @@
+button {
+    background-color: white;
+    border: 1px black solid;
+    color: black;
+    width: 10%;
+    font-family: $font-family_Alata;
+    text-transform: uppercase;
+    height: 5%;
+    text-decoration: none;
+    padding: 0.5%;
+    @include tablet-landscape-up {
+        display: none;
+    }
+    @include mobile {
+        display: none;
+    }
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
