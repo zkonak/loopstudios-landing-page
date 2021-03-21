@@ -51,6 +51,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-top: 3%
 }
 
 .logo {
@@ -63,6 +64,7 @@ header {
     width: 30%;
     display: flex;
     justify-content: space-evenly;
+    font-family: $font-family_Alata;
     margin: 1%;
     @include tablet-portrait-up {
         display: none;
@@ -87,12 +89,12 @@ header {
 
 .header-menu a {
     text-decoration: none;
-    color: white;
+    color: $white;
     cursor: pointer;
 }
 
 .title {
-    border: 2px solid white;
+    border: 2px solid $white;
     width: 60%;
     height: 60%;
     margin: 2%;
@@ -101,7 +103,7 @@ header {
     align-items: center;
     margin-left: 6%;
     @include desktop-up {
-        border: 2px solid white;
+        border: 2px solid $white;
         margin: 2%;
         margin-top: 6%;
         display: flex;
@@ -110,12 +112,15 @@ header {
         width: 90%;
         height: 90%;
     }
+    @include tablet-landscape-up {
+        margin-top: 20%
+    }
 }
 
 h1 {
     font-size: 6rem;
     margin: 3%;
-    color: white;
+    color: $white;
     @media (max-width: 800px) {
         font-size: 3rem;
     }
@@ -139,9 +144,9 @@ h1 {
     flex-direction: column;
     width: 40%;
     position: absolute;
-    background-color: white;
+    background-color: $white;
     right: 150px;
-    top: 950px;
+    top: 970px;
     padding-top: 3%;
     padding-bottom: 5%;
     @include tablet-landscape-up {
@@ -161,7 +166,7 @@ h2 {
     width: 80%;
     margin-left: 6%;
     line-height: 30px;
-    color: hsl(0, 0%, 41%);
+    color: $gray;
     font-family: $font-family_Alata;
 }
 
@@ -187,7 +192,7 @@ h2 {
     }
     #about>h1 {
         color: $white;
-        border: 2px solid white;
+        border: 2px solid $white;
         height: 50%;
         width: 100%;
         text-align: center;
@@ -198,7 +203,7 @@ h2 {
         align-items: center;
     }
     nav a {
-        color: blanchedalmond;
+        color: $white;
         text-decoration: none;
         font-size: $nav;
     }
@@ -211,6 +216,7 @@ h2 {
         font-weight: lighter;
         text-align: center;
         padding: 20% 0 10% 0;
+        margin-right: 10%;
     }
     p {
         font-size: 24px;
@@ -240,25 +246,27 @@ h2 {
         font-size: 36px;
         text-align: center;
         padding-bottom: 15%;
+        margin-left: 20%;
     }
-    .button-see-all {
-        @include center;
-    }
-    .button-see-all>button {
-        width: 30%;
-        font-size: 24px;
-        background: $background;
-        border: 3px solid black;
-        margin-bottom: 8%;
-    }
+    // .button-see-all {
+    //     @include center;
+    // }
+    // .button-see-all>button {
+    //     display: block;
+    //     width: 30%;
+    //     font-size: 24px;
+    //     background: $background;
+    //     border: 3px solid black;
+    //     margin-bottom: 8%;
+    // }
     // burger
-    nav {
+    section>nav {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background: black;
+        background: $black;
         @include colunm;
         justify-content: center;
         gap: 50px;
@@ -291,7 +299,7 @@ h2 {
         margin: 6px 0;
         width: 40px;
         height: 5px;
-        background: #FFFFFF;
+        background: $white;
         border-radius: 54px;
         display: block;
         transition: 0.5s;
@@ -306,29 +314,29 @@ h2 {
         opacity: 0;
     }
     // footer
-    #footerMobile,
-    .div-liens {
-        display: block;
-        background: black;
-        min-height: 200px;
-        align-items: center;
-        @include colunm;
-        gap: 25px;
-    }
-    .div-liens a {
-        text-decoration: none;
-        color: white;
-    }
-    .reseau-sociaux-items {
-        display: flex;
-        flex-direction: row;
-        gap: 25px;
-    }
-    footer>a>img {
-        width: 92%;
-        padding-top: 20%;
-    }
-    footer {
-        padding-bottom: 20%;
-    }
+    // #footerMobile,
+    // .div-liens {
+    //     display: block;
+    //     background: black;
+    //     min-height: 200px;
+    //     align-items: center;
+    //     @include colunm;
+    //     gap: 25px;
+    // }
+    // .div-liens a {
+    //     text-decoration: none;
+    //     color: white;
+    // }
+    // .reseau-sociaux-items {
+    //     display: flex;
+    //     flex-direction: row;
+    //     gap: 25px;
+    // }
+    // footer>a>img {
+    //     width: 92%;
+    //     padding-top: 20%;
+    // }
+    // footer {
+    //     padding-bottom: 20%;
+    // }
 }

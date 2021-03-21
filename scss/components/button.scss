@@ -1,5 +1,5 @@
 button {
-    background-color: white;
+    background-color: $white;
     border: 1px black solid;
     color: black;
     width: 10%;
@@ -17,6 +17,20 @@ button {
 }
 
 button:hover {
-    background-color: black;
-    color: white;
+    background-color: $black;
+    color: $white;
+}
+
+.button-see-all {
+    @include center;
+}
+
+.button-see-all>button {
+    @include tablet-landscape-up {
+        display: block;
+        width: 30%;
+        font-size: 24px;
+        border: 3px solid $black;
+        margin-bottom: 8%;
+    }
 }

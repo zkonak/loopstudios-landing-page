@@ -8,33 +8,6 @@
   src: url("../fonts/JosefinSans-ExtraLight.ttf");
   font-weight: 300;
 }
-button {
-  background-color: white;
-  border: 1px black solid;
-  color: black;
-  width: 10%;
-  font-family: "Alata";
-  text-transform: uppercase;
-  height: 5%;
-  text-decoration: none;
-  padding: 0.5%;
-}
-@media (max-width: 900px) {
-  button {
-    display: none;
-  }
-}
-@media (max-width: 375px) {
-  button {
-    display: none;
-  }
-}
-
-button:hover {
-  background-color: black;
-  color: white;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -94,6 +67,7 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 3%;
 }
 
 .logo {
@@ -106,6 +80,7 @@ header {
   width: 30%;
   display: flex;
   justify-content: space-evenly;
+  font-family: "Alata";
   margin: 1%;
 }
 @media (max-width: 700px) {
@@ -170,6 +145,11 @@ header {
     height: 90%;
   }
 }
+@media (max-width: 900px) {
+  .title {
+    margin-top: 20%;
+  }
+}
 
 h1 {
   font-size: 6rem;
@@ -204,7 +184,7 @@ h1 {
   position: absolute;
   background-color: white;
   right: 150px;
-  top: 950px;
+  top: 970px;
   padding-top: 3%;
   padding-bottom: 5%;
 }
@@ -267,7 +247,7 @@ h2 {
   }
 
   nav a {
-    color: blanchedalmond;
+    color: white;
     text-decoration: none;
     font-size: 18px;
   }
@@ -282,6 +262,7 @@ h2 {
     font-weight: lighter;
     text-align: center;
     padding: 20% 0 10% 0;
+    margin-right: 10%;
   }
 
   p {
@@ -317,22 +298,10 @@ h2 {
     font-size: 36px;
     text-align: center;
     padding-bottom: 15%;
+    margin-left: 20%;
   }
 
-  .button-see-all {
-    display: flex;
-    justify-content: center;
-  }
-
-  .button-see-all > button {
-    width: 30%;
-    font-size: 24px;
-    background: white;
-    border: 3px solid black;
-    margin-bottom: 8%;
-  }
-
-  nav {
+  section > nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -347,7 +316,7 @@ h2 {
     transition: 0.5s;
     padding-top: 5%;
   }
-  nav a {
+  section > nav a {
     font-size: 24px;
   }
 
@@ -376,7 +345,7 @@ h2 {
     margin: 6px 0;
     width: 40px;
     height: 5px;
-    background: #FFFFFF;
+    background: white;
     border-radius: 54px;
     display: block;
     transition: 0.5s;
@@ -393,39 +362,9 @@ h2 {
   .burger-cross span:nth-child(2) {
     opacity: 0;
   }
-
-  #footerMobile,
-.div-liens {
-    display: block;
-    background: black;
-    min-height: 200px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .div-liens a {
-    text-decoration: none;
-    color: white;
-  }
-
-  .reseau-sociaux-items {
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-  }
-
-  footer > a > img {
-    width: 92%;
-    padding-top: 20%;
-  }
-
-  footer {
-    padding-bottom: 20%;
-  }
 }
 .titleGalerie {
+  width: 92%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 2%;
@@ -433,10 +372,10 @@ h2 {
 
 .galerieDesktop {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, 24%);
   grid-template-rows: repeat(2, 50%);
   grid-row-gap: 2%;
-  margin-left: 4%;
+  margin-left: 6%;
 }
 @media (max-width: 700px) {
   .galerieDesktop {
@@ -456,7 +395,7 @@ figure img {
   display: block;
 }
 figure figcaption {
-  color: #FFF;
+  color: white;
   position: absolute;
   bottom: 5%;
   left: 10%;
@@ -489,25 +428,70 @@ figure:hover figcaption {
   }
 }
 
+button {
+  background-color: white;
+  border: 1px black solid;
+  color: black;
+  width: 10%;
+  font-family: "Alata";
+  text-transform: uppercase;
+  height: 5%;
+  text-decoration: none;
+  padding: 0.5%;
+}
+@media (max-width: 900px) {
+  button {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  button {
+    display: none;
+  }
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+.button-see-all {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .button-see-all > button {
+    display: block;
+    width: 30%;
+    font-size: 24px;
+    border: 3px solid black;
+    margin-bottom: 8%;
+  }
+}
+
 #footerDesktop {
   background-color: black;
   display: flex;
-  padding-top: 3%;
+  padding-top: 2%;
   padding-right: 1%;
+  padding-bottom: 5%;
   margin-top: 3%;
   max-width: 100%;
-  align-items: center;
   justify-content: space-between;
   font-family: "Alata";
 }
 @media (max-width: 700px) {
   #footerDesktop {
-    display: none;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 @media (max-width: 375px) {
   #footerDesktop {
-    display: none;
+    flex-direction: column;
+    padding-top: 5%;
   }
 }
 
@@ -520,31 +504,46 @@ figure:hover figcaption {
 
 @media (max-width: 700px) {
   .footer_logo {
-    margin-left: 25%;
+    padding-left: 17%;
+    width: 50%;
   }
 }
 @media (max-width: 375px) {
   .footer_logo {
-    margin-left: 0%;
+    width: 80%;
   }
 }
 
 #footerDesktop img {
   margin-left: 15%;
 }
+@media (max-width: 375px) {
+  #footerDesktop img {
+    margin-left: 7%;
+  }
+}
 
 .footerright {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 700px) {
+  .footerright {
+    margin-top: 5%;
+    align-items: center;
+  }
+}
 
 .footer-menu {
-  width: 30%;
   display: flex;
+  margin-left: 14%;
+  margin-top: 5%;
 }
 @media (max-width: 700px) {
   .footer-menu {
-    padding-right: 15%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 42%;
   }
 }
 @media (max-width: 375px) {
@@ -564,18 +563,42 @@ figure:hover figcaption {
     flex-direction: column;
   }
 }
+@media (max-width: 700px) {
+  .footer-menu_list {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 375px) {
+  .footer-menu_list {
+    flex-direction: column;
+  }
+}
 
+@media (max-width: 700px) {
+  .icons {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    margin-right: 10%;
+  }
+}
 @media (max-width: 375px) {
   .icons {
     display: flex;
     width: 60%;
     justify-content: space-between;
-    margin-left: 10%;
+    margin-left: 12%;
   }
 }
 
 .footer-menu ul li {
   margin-right: 10%;
+}
+@media (max-width: 700px) {
+  .footer-menu ul li {
+    margin-bottom: 30%;
+  }
 }
 @media (max-width: 375px) {
   .footer-menu ul li {
@@ -590,8 +613,20 @@ figure:hover figcaption {
 }
 
 .copyright {
-  color: darkgray;
+  color: #8c8c8c;
   margin-top: 5%;
+}
+@media (max-width: 700px) {
+  .copyright {
+    margin-right: 10%;
+  }
+}
+@media (max-width: 375px) {
+  .copyright {
+    width: 70%;
+    font-size: 0.7rem;
+    margin-left: 25%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
